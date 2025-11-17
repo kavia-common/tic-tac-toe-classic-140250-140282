@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "com.example.tic_tac_toe_frontend"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973"
+    // Avoid pinning ndkVersion in constrained CI to prevent lookup/download stalls.
+    // Use the default from the installed SDK if present.
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
